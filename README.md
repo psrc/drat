@@ -13,21 +13,31 @@ accumulates more _code_ for `drat`, as well as
 - Just fork this repo into your own domain, and you have a working `drat`
  repo.
 - Enable [GitHub Pages](https://docs.github.com/en/github/working-with-github-pages)
- with the `docs/` folder in the main branch:
+	from the `gh-pages` branch at the repository root (`/`):
 
  ![](https://github.blog/wp-content/uploads/2016/08/47c2ecc4-6533-11e6-828a-91980daa7297.gif)
 
-Note, however, that you currently **must** use the `drat` package directly
-from its [GitHub repo](https://github.com/eddelbuettel/drat) in order to use
-GitHub Pages off `docs/` in the main branch---and you need to enable this,
-e.g. via `options(dratBranch="docs")` as the _released_ version only supports
-a `gh-pages` branch.  So in a sense this repo is currently "experimental" as
-is the support in the not-yet-released `drat` version.
+For this repository, the published site and package index should live on
+`gh-pages` at `/`, which is the default `drat` publishing layout.
+
+The `docs/` directory in the source branch remains the staging area for the
+published repository contents; a deploy workflow can copy `docs/` to the root
+of `gh-pages`.
 
 This repo was initiated (using command `dratPackage()`) with the source and
 windows binary of the last CRAN release of `drat`. You can delete either or
 both (for example via command `pruneRepo()`) and then
-add your own (via `insertPackage()`). 
+add your own (via `insertPackage()`).
+
+### Deployment
+
+The expected deployment flow is:
+
+1. Build or obtain package artifacts for the PSRC packages.
+2. Add source tarballs under `docs/src/contrib/` and Windows binaries under
+	`docs/bin/windows/contrib/4.0/`.
+3. Regenerate the `PACKAGES` metadata in `docs/`.
+4. Publish the contents of `docs/` to the root of the `gh-pages` branch.
 
 ### Author
 

@@ -6,3 +6,56 @@ Suggests: git2r, knitr, rmarkdown
 License: GPL (>= 2)
 MD5sum: 2e7107c8bc567c3e7d1aedbd7aaeb396
 NeedsCompilation: no
+
+Package: psrc.travelsurvey
+Version: 0.1.0
+Depends: R (>= 3.5)
+Imports: data.table, dplyr, magrittr, labelled, pkgcond, psrcelmer,
+        rlang, srvyr, stringr, tidyr, travelSurveyTools
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
+License: GPL-3 + file LICENSE
+MD5sum: 6860e295bb4eab8efea4153f61635307
+NeedsCompilation: no
+
+Package: psrccensus
+Version: 0.1.0
+Depends: R (>= 3.5)
+Imports: curl, data.table, dplyr, fredr, glue, httr, lubridate,
+        magrittr, psrcelmer, purrr, readr, rlang, sf, srvyr, stringr,
+        tidycensus, tidyr, tidyselect, tigris
+Suggests: ggplot2, htmltools, leaflet, rmarkdown, scales, knitr,
+        testthat (>= 3.0.0), R.utils, usethis
+License: GPL-3 + file LICENSE
+MD5sum: d067e11cfe054f2ab0bc0e2c0c2e232a
+NeedsCompilation: no
+
+Package: psrcctpp
+Version: 0.1.0
+Depends: R (>= 4.1.0)
+Imports: data.table, dplyr, httr2, magrittr, psrccensus, rlang, sf,
+        stringr, tidycensus, tidyselect
+Suggests: rmarkdown, knitr, testthat (>= 3.0.0), R.utils
+License: GPL-3 + file LICENSE
+MD5sum: ae58100b1f850cbbc304ba3a508f923a
+NeedsCompilation: no
+
+Package: psrcelmer
+Version: 0.0.0.9000
+Imports: DBI, glue, odbc, sf, stringr
+Suggests: dplyr, htmltools, knitr, leaflet, psrccensus, psrcplot,
+        rmarkdown, scales, testthat (>= 3.0.0)
+License: GPL-3 + file LICENSE
+MD5sum: 5987b88450d0b8a28e219f78b7d8aa36
+NeedsCompilation: no
+
+Package: psrcplot
+Version: 1.1.0
+Depends: R (>= 4.1.0)
+Imports: magrittr, dplyr, echarts4r, scales, ggplot2, treemapify,
+        rlang, formattable, graphics, sysfonts, systemfonts, showtext,
+        stringr, plotly
+Suggests: forcats, lubridate, tidyverse, psrctrends, psrccensus, knitr,
+        htmlwidgets, testthat (>= 3.0.0), vdiffr
+License: GPL-3 + file LICENSE
+MD5sum: 516565661a1fcd776069f7604b6a06f2
+NeedsCompilation: no
